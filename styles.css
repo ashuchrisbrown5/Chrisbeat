@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f0f0f;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  width: 360px;
+  height: 460px;
+}
+
+.neon-border {
+  position: absolute;
+  inset: 0;
+  padding: 9px;
+  background: linear-gradient(50deg, #00f0ff, #ff0055, #00f0ff, #ff0055, green, yellow, aqua, violet);
+  background-size: 360% 360%;
+  border-radius: 20px;
+  animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+.login-form {
+  position: relative;
+  z-index: 1;
+  background: #1a1a1a;
+  border-radius: 18px;
+  padding: 40px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-form input {
+  background: #111;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.login-form input::placeholder {
+  color: #aaa;
+}
+
+.login-form button {
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  background: #00eaff;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background: #00bcd4;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 2);
+}
+
+
+.options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.options .forgot {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.options .signup {
+  color: #ff0055;
+  font-weight: bold;
+  text-decoration: none;
+}
